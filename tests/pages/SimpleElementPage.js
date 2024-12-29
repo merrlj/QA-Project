@@ -9,4 +9,4 @@ class SimpleElementPage {
     }
 }
 
-export default SimpleElementPage;  // Default export
+export default SimpleElementPage; 

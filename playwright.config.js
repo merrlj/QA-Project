@@ -1,5 +1,5 @@
 // @ts-check
-const { defineConfig, devices } = require('@playwright/test');
+import { defineConfig, devices } from '@playwright/test';
 
 /**
  * Read environment variables from file.
@@ -10,13 +10,13 @@ const { defineConfig, devices } = require('@playwright/test');
 /**
  * 
  */
-module.exports = defineConfig({
+export default defineConfig({
   testDir: './tests', // Directory where your test files are located
   retries: 1, // Number of retries for failing tests
 
   use: {
     headless: true, // Run tests in headless mode
-    baseURL: 'https://ultimateqa.com', // Base URL for your tests
+    baseURL: 'https://ultimateqa.com/automation', // Base URL for your tests
     viewport: { width: 1280, height: 720 }, // Set browser window size
     screenshot: 'only-on-failure', // Take screenshots on failures
     video: 'retain-on-failure', // Record videos on failures

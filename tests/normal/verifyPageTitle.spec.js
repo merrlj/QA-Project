@@ -3,7 +3,7 @@ import HomePage from '../pages/HomePage';
 
 test('Verify page title of Automation Practice', async ({ page }) => {
   const homePage = new HomePage(page);
-  await homePage.visit(); // Navigate to the page
+  await homePage.visit(); 
   const expectedTitle = 'Automation Practice - Ultimate QA';
-  await expect(page).toHaveTitle(expectedTitle); // Assert the title is correct
+  await expect(page).toHaveTitle(expectedTitle);
 });
