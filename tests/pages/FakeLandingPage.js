@@ -6,14 +6,11 @@ export default class FakeLandingPage {
 
     async visit() {
         const url = 'https://ultimateqa.com/fake-landing-page';
-        await this.page.goto(url);
-        await this.page.waitForLoadState('load'); 
+        await this.page.goto(url, { waitUntil: 'load' });
     }
 
     async clickViewCoursesButton() {
-        await this.viewCoursesButton.waitFor(); 
-        await this.viewCoursesButton.click(); 
-        await this.page.waitForLoadState('load'); 
-        return this.page.url(); 
+        await this.viewCoursesButton.click();
+        return this.page.url();
     }
 }

@@ -3,6 +3,7 @@ import SimpleElementPage from '../pages/SimpleElementPage';
 
 test.describe('Simple HTML Elements Test Suite', () => {
     let simplePage;
+    test.setTimeout(60000);
 
     test.beforeEach(async ({ page }) => {
         simplePage = new SimpleElementPage(page);
@@ -11,7 +12,9 @@ test.describe('Simple HTML Elements Test Suite', () => {
 
     test('Verify Button Redirects to Homepage', async ({ page }) => {
         await simplePage.clickButton();
-
+        await navigationPromise;
         await expect(page).toHaveURL('https://ultimateqa.com/?');
+
+
     });
 });

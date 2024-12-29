@@ -14,6 +14,8 @@ test('Form Submission with Boundary Values', async ({ page }) => {
 
   await formPage.submitForm();
 
+  await successMessageLocator.waitFor({ state: 'visible', timeout: 10000 });
+
   await expect(successMessageLocator).toBeVisible();
   await expect(successMessageLocator).toContainText('Thanks for contacting us');
 });

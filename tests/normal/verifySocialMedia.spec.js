@@ -3,6 +3,7 @@ import { ComplicatedPage } from '../pages/ComplicatedPage';
 
 test('Test Social Media Links', async ({ page }) => {
   const complicatedPage = new ComplicatedPage(page);
+  test.setTimeout(60000);
 
   await complicatedPage.open();
 

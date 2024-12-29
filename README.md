@@ -1,20 +1,48 @@
-##Ultimate QA-test cases 
-Set of automated test built with Playwright to verify functionalities of website.
-##Installation
-To get started this project we fisrtly need to set up playwright using npm init playwright@latest, which will instal following files
-playwright.config.ts
-package.json
-package-lock.json
-tests/
-  example.spec.ts
-tests-examples/
-  demo-todo-app.spec.ts
-  ##Dependencies 
-  Project depend on external libraries, Playwright Library, Browser for Playwright, to install all dependencies run npm install
-##Runing tests
-After dependencies are installed, you can run test using npx playwright test + name of test
-##Test structure
-Normal and smoke test cases are stored in separated folders, and also one folder is reserved for POM.
+## Ultimate QA - Test Cases
+
+Set of automated tests built with Playwright to verify functionalities of the website.
+
+## Installation
+
+To get started with this project, we first need to set up Playwright using:
+
+```bash
+npm init playwright@latest
+```
+
+This will install the following files:
+
+- **playwright.config.ts**
+- **package.json**
+- **package-lock.json**
+- **tests/**
+  - `example.spec.ts`
+- **tests-examples/**
+  - `demo-todo-app.spec.ts`
+
+## Dependencies
+
+The project depends on external libraries, including the Playwright Library and Browsers for Playwright. To install all dependencies, run:
+
+```bash
+npm install
+```
+
+## Running Tests
+
+After dependencies are installed, you can run tests using:
+
+```bash
+npx playwright test [name-of-test]
+```
+
+## Test Structure
+
+Normal and smoke test cases are stored in separate folders, and one folder is reserved for POM.
+
+### Folder Structure
+
+```
 QA PROJECT
 ├── node_modules
 ├── tests
@@ -48,37 +76,46 @@ QA PROJECT
 ├── playwright.config.js
 ├── package-lock.json
 └── package.json
-    
-##Page object model
--BigPage2.js
-is contributing:
-1.bigPageManyElements.spec 2.js
--ComplicatedPage.js
-is contributing:
-1.verifySocialMedia.spec 1.js
--FakeLandingPage1.js
-is contributing:
-1.tressTestViewCourses.spec 1.js
--FormPage3.js
-is contributing:
-1.formLoadTime.spec 1.js
-2.submitEmptyForm.spec 1.js
-3.formSubmissionWithBoundaryValues.spec 1.js
--HomePage2.js
-is contributing:
-1.navigateAndSubmitFormTest.spec 1.js
-2.pageLoadTime.spec 1.js
-3.verifyPageTitle.spec.js
-4.bigPageManyElements.spec 2.js
-5.verifyHomepageLoad.spec 2.js
-6.verifySearchWithValidInput.spec 1.js
--LoginPage3.js
-is contributing:
-1.forgotPasswordFlow.spec 2.js
-2.loginWithValidCredentials.spec 3.js
--NavigationPage.js
-is contributing:
-1.navigationBarTest.spec 1.js
--SimpleElementPage.js
-is contributing:
-1.simpleElementTest.spec 1.js
+```
+
+## Page Object Model
+
+### BigPage.js
+Contributing tests:
+1. `bigPageManyElements.spec.js`
+
+### ComplicatedPage.js
+Contributing tests:
+1. `verifySocialMedia.spec.js`
+
+### FakeLandingPage.js
+Contributing tests:
+1. `stressTestViewCourses.spec.js`
+
+### FormPage.js
+Contributing tests:
+1. `formLoadTime.spec.js`
+2. `submitEmptyForm.spec.js`
+3. `formSubmissionWithBoundaryValues.spec.js`
+
+### HomePage.js
+Contributing tests:
+1. `navigateAndSubmitFormTest.spec.js`
+2. `pageLoadTime.spec.js`
+3. `verifyPageTitle.spec.js`
+4. `bigPageManyElements.spec.js`
+5. `verifyHomepageLoad.spec.js`
+6. `verifySearchWithValidInput.spec.js`
+
+### LoginPage.js
+Contributing tests:
+1. `forgotPasswordFlow.spec.js`
+2. `loginWithValidCredentials.spec.js`
+
+### NavigationPage.js
+Contributing tests:
+1. `navigationBarTest.spec.js`
+
+### SimpleElementPage.js
+Contributing tests:
+1. `simpleElementTest.spec.js`

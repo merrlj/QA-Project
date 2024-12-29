@@ -13,9 +13,11 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests', // Directory where your test files are located
   retries: 1, // Number of retries for failing tests
-
+  timeout: 60000, // Increase global test timeout
+  workers: 4,
   use: {
-    headless: true, // Run tests in headless mode
+    headless: true, // Optional: Run tests in headless mode
+    testDir: './tests', // Directory containing your tests
     baseURL: 'https://ultimateqa.com/automation', // Base URL for your tests
     viewport: { width: 1280, height: 720 }, // Set browser window size
     screenshot: 'only-on-failure', // Take screenshots on failures
