@@ -1,6 +1,6 @@
-const { expect } = require('@playwright/test');
+import { expect } from '@playwright/test';
 
-exports.PlaywrightDevPage = class PlaywrightDevPage {
+export class PlaywrightDevPage {
 
   /**
    * @param {import('@playwright/test').Page} page
@@ -30,4 +30,4 @@ exports.PlaywrightDevPage = class PlaywrightDevPage {
     await this.getStarted();
     await this.pomLink.click();
   }
-};
+}

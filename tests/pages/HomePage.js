@@ -2,7 +2,7 @@ export default class HomePage {
   constructor(page) {
     this.page = page;
     this.header = 'h1'; 
-    this.navLinks = 'nav a'; 
+    this.navLinks = '#main-menu a';
     this.searchInput = 'input[type="search"]'; 
     this.searchResults = '.search-results'; 
     this.searchButton = 'button[aria-label="Search"]'; 
@@ -42,4 +42,5 @@ export default class HomePage {
   async isNavLinkVisible(index) {
     return await this.page.locator(this.navLinks).nth(index).isVisible();
   }
+  
 }

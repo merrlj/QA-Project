@@ -2,12 +2,17 @@ import { test, expect } from '@playwright/test';
 import HomePage from '../pages/HomePage';
 
 test('Home Page Load Performance', async ({ page }) => {
+  // Declare variables first
   const homePage = new HomePage(page);
+  const startTime = Date.now();
+  const maxLoadTime = 3500; // Max allowed load time in milliseconds
 
-  const start = Date.now();
+  // Navigate to the homepage
   await homePage.visit();
-  const loadTime = Date.now() - start;
 
-  // Ensure the page loads in under 3.5 seconds
-  expect(loadTime).toBeLessThan(3500);
+  // Calculate the load time
+  const loadTime = Date.now() - startTime;
+
+  // Ensure the page loads in under the specified time
+  expect(loadTime).toBeLessThan(maxLoadTime);
 });
