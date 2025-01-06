@@ -8,7 +8,7 @@ test('Form Submission with Boundary Values', async ({ page }) => {
   await formPage.navigateToFormPage();
 
   await formPage.fillForm({
-    '#et_pb_contact_name_0': 'John Doe',
+    '#et_pb_contact_name_0': 'Haso',
     '#et_pb_contact_message_0': 'A'.repeat(255),
   });
 

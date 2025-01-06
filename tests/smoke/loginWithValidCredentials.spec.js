@@ -8,6 +8,6 @@ test('Login with Valid Credentials', async ({ page }) => {
   await loginPage.navigateToLoginPage();
   await loginPage.login('merjem.lj@gmail.com', 'merjem123');
 
-  await expect(successMessageLocator).toBeVisible();
+  await expect(successMessageLocator).toBeVisible({ timeout: 10000 }); 
   await expect(successMessageLocator).toContainText('Signed in successfully.');
 });

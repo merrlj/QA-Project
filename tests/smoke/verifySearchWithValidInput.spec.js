@@ -16,8 +16,8 @@ test('Verify Search Functionality on Home Page', async ({ page }) => {
 
   await searchInput.press('Enter');
 
-  await page.waitForURL(expectedUrl);
-  expect(page.url()).toBe(expectedUrl);
+  await expect(page).toHaveURL(expectedUrl);
 
+  await expect(searchResultLink).toBeVisible();
   await searchResultLink.click();
 });

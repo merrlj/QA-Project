@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import SimpleElementPage from '../pages/SimpleElementPage'; 
+import SimpleElementPage from '../pages/SimpleElementPage';
 
 test.describe('Simple HTML Elements Test Suite', () => {
     let simplePage;
@@ -12,9 +12,7 @@ test.describe('Simple HTML Elements Test Suite', () => {
 
     test('Verify Button Redirects to Homepage', async ({ page }) => {
         await simplePage.clickButton();
-        await navigationPromise;
+        await page.waitForURL('https://ultimateqa.com/?');
         await expect(page).toHaveURL('https://ultimateqa.com/?');
-
-
     });
 });

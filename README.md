@@ -12,13 +12,13 @@ npm init playwright@latest
 
 This will install the following files:
 
-- **playwright.config.ts**
+- **playwright.config.js**
 - **package.json**
 - **package-lock.json**
 - **tests/**
-  - `example.spec.ts`
+  - `example.spec.js`
 - **tests-examples/**
-  - `demo-todo-app.spec.ts`
+  - `demo-todo-app.spec.js`
 
 ## Dependencies
 
@@ -66,16 +66,12 @@ QA PROJECT
 │   │   ├── LoginPage.js
 │   │   ├── NavigationPage.js
 │   │   └── SimpleElementPage.js
-│   └── smoke
-│       ├── bigPageManyElements.spec.js
-│       ├── formSubmissionWithBoundaryValues.spec.js
-│       ├── loginWithValidCredentials.spec.js
-│       ├── verifyHomepageLoad.spec.js
-│       ├── verifySearchWithValidInput.spec.js
-│       └── playwright-dev-page.js
+│   └── playwright-dev-page.js
 ├── playwright.config.js
 ├── package-lock.json
-└── package.json
+├── package.json
+└── README.md  
+
 ```
 
 ## Page Object Model

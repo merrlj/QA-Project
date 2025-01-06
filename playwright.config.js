@@ -14,12 +14,13 @@ export default defineConfig({
   testDir: './tests', // Directory where your test files are located
   retries: 1, // Number of retries for failing tests
   timeout: 60000, // Increase global test timeout
-  workers: 4,
+  workers: 2,
   use: {
     headless: true, // Optional: Run tests in headless mode
     testDir: './tests', // Directory containing your tests
     baseURL: 'https://ultimateqa.com/automation', // Base URL for your tests
     viewport: { width: 1280, height: 720 }, // Set browser window size
+    ignoreHTTPSErrors: true,
     screenshot: 'only-on-failure', // Take screenshots on failures
     video: 'retain-on-failure', // Record videos on failures
   },
